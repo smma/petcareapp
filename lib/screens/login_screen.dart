@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
       if (success) {
         Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => const _LoggedInStub()),
+          MaterialPageRoute(builder: (context) => const LoggedInScreen()),
         );
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -173,8 +173,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
 /// Minimal landing screen shown after a successful login.
 /// Confirms the API round-trip worked and allows sign-out.
-class _LoggedInStub extends StatelessWidget {
-  const _LoggedInStub();
+class LoggedInScreen extends StatelessWidget {
+  const LoggedInScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
